@@ -25,7 +25,7 @@
 }
 
 .flight-booking-form .fbf-tab.fbf-primary {
-  background: #f0f7ff;
+  background: #ffd929;
   color: #0b6bdc;
   border: 1px solid #cae1ff;
   font-weight: 600;
@@ -41,9 +41,21 @@
 
 .flight-booking-form .fbf-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  margin-bottom: 14px;
+  margin-bottom: 32px;
+  gap: 16px;
+}
+
+/* Position Round-trip above the Depart tile but on the same header line */
+.flight-booking-form .fbf-depart-field {
+  position: relative;
+}
+.flight-booking-form .fbf-depart-field .fbf-trip-type {
+  position: absolute;
+  top: -32px; /* pull into the header line */
+  left: 0;    /* align with the Depart field's left edge */
+  background: transparent;
 }
 
 .flight-booking-form .fbf-title {
@@ -72,6 +84,18 @@
   font-weight: 600;
   font-size: 16px;
 }
+
+/* Position Flight above From (inline with Round-trip) */
+.flight-booking-form .fbf-from-field {
+  position: relative;
+}
+.flight-booking-form .fbf-from-field .fbf-inline-title {
+  position: absolute;
+  top: -32px; /* align with header line */
+  left: 0;
+}
+
+/* (prev depart-field positioning removed) */
 
 .flight-booking-form .fbf-grid {
   display: grid;
@@ -120,7 +144,7 @@
   align-items: center;
   justify-content: center;
   padding: 16px 28px;
-  border-radius: 999px;
+  border-radius: 10px;
   background: linear-gradient(180deg, #1d9bf0, #0077d9);
   color: #ffffff !important;
   font-weight: 700;
@@ -165,6 +189,11 @@
   .flight-booking-form .fbf-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* Remove global link arrow icon from the search button */
+.flight-booking-form .fbf-search-button::after {
+  content: none;
 }
 
 

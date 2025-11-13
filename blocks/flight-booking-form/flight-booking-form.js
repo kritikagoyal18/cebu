@@ -15,29 +15,28 @@ export default function decorate(block) {
   const card = document.createElement('div');
   card.className = 'fbf-card';
   card.innerHTML = `
-    <div class="fbf-header">
-      <div class="fbf-title">
-        <span class="fbf-icon">✈</span>
-        <span>Flight</span>
-      </div>
-      <div class="fbf-trip-type">Round-trip</div>
-    </div>
+    <div class="fbf-header"></div>
     <div class="fbf-grid">
-      <div class="fbf-field">
+      <div class="fbf-field fbf-from-field">
+        <div class="fbf-title fbf-inline-title">
+          <span class="fbf-icon">✈</span>
+          <span>Flight</span>
+        </div>
         <span class="fbf-label">From</span>
         <div class="fbf-value">Manila MNL</div>
       </div>
       <div class="fbf-field">
         <span class="fbf-label">To</span>
-        <div class="fbf-value fbf-dim">Select Destination</div>
+        <div class="fbf-value fbf-dim">Melbourne MEL</div>
       </div>
-      <div class="fbf-field">
+      <div class="fbf-field fbf-depart-field">
+        <span class="fbf-trip-type">Round-trip</span>
         <span class="fbf-label">Depart</span>
-        <div class="fbf-value">13 Nov 2025</div>
+        <div class="fbf-value">13 January 2026</div>
       </div>
       <div class="fbf-field">
         <span class="fbf-label">Return</span>
-        <div class="fbf-value fbf-dim">Returning on</div>
+        <div class="fbf-value fbf-dim">23 January 2026</div>
       </div>
       <div class="fbf-actions">
         <a href="#" class="fbf-search-button" aria-label="Search flights">Search flights</a>
@@ -55,9 +54,9 @@ export default function decorate(block) {
         bubbles: true,
         detail: {
           from: 'Manila MNL',
-          to: null,
-          depart: '13 Nov 2025',
-          return: null
+          to: 'Melbourne MEL',
+          depart: '13 January 2026',
+          return: '23 January 2026'
         }
       });
       block.dispatchEvent(event);
