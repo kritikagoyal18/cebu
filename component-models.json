@@ -469,10 +469,24 @@
         "multi": false
       },
       {
+        "component": "text",
+        "valueType": "string",
+        "name": "caption1",
+        "label": "Caption 1",
+        "multi": false
+      },
+      {
         "component": "reference",
         "valueType": "string",
         "name": "image2",
         "label": "Image 2",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "caption2",
+        "label": "Caption 2",
         "multi": false
       },
       {
@@ -483,6 +497,13 @@
         "multi": false
       },
       {
+        "component": "text",
+        "valueType": "string",
+        "name": "caption3",
+        "label": "Caption 3",
+        "multi": false
+      },
+      {
         "component": "reference",
         "valueType": "string",
         "name": "image4",
@@ -490,10 +511,24 @@
         "multi": false
       },
       {
+        "component": "text",
+        "valueType": "string",
+        "name": "caption4",
+        "label": "Caption 4",
+        "multi": false
+      },
+      {
         "component": "reference",
         "valueType": "string",
         "name": "image5",
         "label": "Image 5",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "caption5",
+        "label": "Caption 5",
         "multi": false
       }
     ]

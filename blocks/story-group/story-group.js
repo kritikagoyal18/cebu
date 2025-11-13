@@ -1,15 +1,16 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
 
 export default function decorate(block) {
-  // Collect up to 5 images from authored content
+  // Collect up to 5 images and optional captions from authored content
   const images = [];
+  const captions = [];
   [...block.children].forEach((row) => {
     const img = row.querySelector('img');
+    const p = row.querySelector('p');
     if (img) {
-      images.push({
-        src: img.src,
-        alt: img.alt || '',
-      });
+      images.push({ src: img.src, alt: img.alt || '' });
+    } else if (p && p.textContent?.trim()) {
+      captions.push(p.textContent.trim());
     }
   });
 
@@ -38,7 +39,7 @@ export default function decorate(block) {
 
     const caption = document.createElement('div');
     caption.className = 'sg-caption';
-    caption.textContent = item.alt || `Story ${idx + 1}`;
+    caption.textContent = captions[idx] || item.alt || `Story ${idx + 1}`;
 
     li.append(thumbWrap, caption);
     ul.append(li);

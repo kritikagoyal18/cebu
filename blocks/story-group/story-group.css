@@ -1,6 +1,6 @@
 /* Story Group: five circular thumbnails with captions */
 .story-group {
-  padding: 16px 0;
+  padding: 10px 0;
 }
 
 .story-group .sg-list {
@@ -8,7 +8,7 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 32px;
-  padding: 0;
+  padding: 10px;
   margin: 0;
   justify-items: center;
   align-items: start;
@@ -19,12 +19,12 @@
 }
 
 .story-group .sg-thumb {
-  width: 160px;
-  height: 160px;
+  width: 92px;
+  height: 92px;
   border-radius: 50%;
   background: #ffffff;
-  border: 10px solid #ffffff;           /* inner white ring */
-  outline: 6px solid #0aa2e5;           /* outer blue ring */
+  border: 8px solid #ffffff;            /* inner white ring */
+  outline: 5px solid #0aa2e5;           /* outer blue ring */
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -52,8 +52,8 @@
     gap: 24px;
   }
   .story-group .sg-thumb {
-    width: 140px;
-    height: 140px;
+    width: 92px;
+    height: 92px;
   }
 }
 
