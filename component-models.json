@@ -455,6 +455,10 @@
     ]
   },
   {
+    "id": "flight-booking-form",
+    "fields": []
+  },
+  {
     "id": "action-button",
     "fields": [
       {
