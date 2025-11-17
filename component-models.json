@@ -780,6 +780,10 @@
     ]
   },
   {
+    "id": "guest-details",
+    "fields": []
+  },
+  {
     "id": "dm-asset",
     "fields": [
         {

@@ -1,0 +1,112 @@
+.guest-details .gd-wrapper {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.guest-details .gd-title {
+  font-size: var(--heading-font-size-l);
+  margin: 10px 0 16px;
+}
+
+.guest-details .gd-wrapper {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 24px;
+}
+
+.guest-details .gd-aside {
+  background: #fff;
+  border: 1px solid #e6ebf2;
+  border-radius: 8px;
+  padding: 10px;
+  height: fit-content;
+}
+.guest-details .gd-tab {
+  padding: 12px 10px;
+  border-radius: 6px;
+  color: #0a7bc2;
+  font-weight: 700;
+}
+.guest-details .gd-tab.gd-active {
+  background: #e7f6ff;
+  border: 1px solid #bfe7ff;
+}
+
+.guest-details .gd-card {
+  background: #fff;
+  border: 1px solid #e6ebf2;
+  border-radius: 10px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.06);
+}
+
+.guest-details .gd-bundles {
+  display: flex;
+  gap: 24px;
+  padding: 20px 20px 10px;
+  border-bottom: 1px solid #edf1f6;
+}
+.guest-details .gd-bundle {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 2px;
+  color: #6b7280;
+  font-size: 13px;
+}
+.guest-details .gd-bundle .gd-name {
+  color: #0a7bc2;
+  font-weight: 700;
+}
+
+.guest-details .gd-form {
+  padding: 20px;
+}
+.guest-details .gd-row {
+  margin: 14px 0 18px;
+}
+.guest-details .gd-label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.guest-details .gd-help {
+  color: #6b7280;
+  font-size: 12px;
+  margin-top: -4px;
+  margin-bottom: 10px;
+}
+.guest-details .gd-grid {
+  display: grid;
+  gap: 12px;
+}
+.guest-details .gd-grid.gd-1 { grid-template-columns: 1fr; }
+.guest-details .gd-grid.gd-2 { grid-template-columns: 1fr 1fr; }
+.guest-details .gd-grid.gd-3 { grid-template-columns: 140px 1fr 1fr; }
+
+.guest-details .gd-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #e1e6ee;
+  border-radius: 6px;
+  padding: 8px 10px;
+  background: #f9fbfd;
+  color: #9aa3ad;
+}
+
+.guest-details .gd-check {
+  display: block;
+  margin-top: 10px;
+  color: #374151;
+}
+
+.guest-details .gd-checkboxes .gd-check {
+  margin: 8px 0;
+}
+
+@media (max-width: 900px) {
+  .guest-details .gd-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+
