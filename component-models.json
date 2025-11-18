@@ -788,6 +788,10 @@
     "fields": []
   },
   {
+    "id": "flight-details",
+    "fields": []
+  },
+  {
     "id": "dm-asset",
     "fields": [
         {
