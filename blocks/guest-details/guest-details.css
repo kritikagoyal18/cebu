@@ -2,17 +2,20 @@
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  padding: 8px 0 24px;
 }
 
 .guest-details .gd-title {
   font-size: var(--heading-font-size-l);
-  margin: 10px 0 16px;
+  margin: 6px 0 18px;
+  font-weight: 800;
+  grid-column: 1 / -1; /* span full width above left nav + form */
 }
 
 .guest-details .gd-wrapper {
   display: grid;
   grid-template-columns: 160px 1fr;
-  gap: 24px;
+  gap: 32px;
 }
 
 .guest-details .gd-aside {
@@ -21,6 +24,8 @@
   border-radius: 8px;
   padding: 10px;
   height: fit-content;
+  position: sticky;
+  top: 96px;
 }
 .guest-details .gd-tab {
   padding: 12px 10px;
@@ -29,22 +34,34 @@
   font-weight: 700;
 }
 .guest-details .gd-tab.gd-active {
-  background: #e7f6ff;
-  border: 1px solid #bfe7ff;
+  background: #f3faff;
+  border: 1px solid #cfe9ff;
+  border-left: 4px solid #0aa2e5;
 }
 
 .guest-details .gd-card {
   background: #fff;
-  border: 1px solid #e6ebf2;
-  border-radius: 10px;
-  box-shadow: 0 10px 24px rgba(0,0,0,.06);
+  border: 1px solid #e9edf3;
+  border-radius: 14px;
+  box-shadow: 0 12px 28px rgba(0,0,0,.06);
+  overflow: hidden;
 }
 
 .guest-details .gd-bundles {
   display: flex;
   gap: 24px;
-  padding: 20px 20px 10px;
-  border-bottom: 1px solid #edf1f6;
+  padding: 18px 24px 12px;
+  border-bottom: 1px solid #eef2f7;
+}
+.guest-details .gd-bundles::before {
+  content: "SELECTED BUNDLES FOR THIS GUEST";
+  display: block;
+  width: 100%;
+  font-size: 11px;
+  font-weight: 800;
+  color: #0a7bc2;
+  letter-spacing: .04em;
+  margin-bottom: 8px;
 }
 .guest-details .gd-bundle {
   display: inline-flex;
@@ -53,21 +70,39 @@
   color: #6b7280;
   font-size: 13px;
 }
+.guest-details .gd-bundle + .gd-bundle {
+  padding-left: 20px;
+  border-left: 1px solid #eef2f7;
+}
+.guest-details .gd-bundle .gd-route {
+  font-weight: 700;
+  color: #6b7280;
+  font-size: 12px;
+}
 .guest-details .gd-bundle .gd-name {
   color: #0a7bc2;
   font-weight: 700;
 }
+.guest-details .gd-plane {
+  margin-left: 4px;
+}
 
 .guest-details .gd-form {
-  padding: 20px;
+  padding: 22px 24px 24px;
 }
 .guest-details .gd-row {
   margin: 14px 0 18px;
+  padding-top: 8px;
+}
+.guest-details .gd-row + .gd-row {
+  border-top: 1px solid #f2f5f9;
 }
 .guest-details .gd-label {
   display: block;
   font-weight: 700;
   margin-bottom: 6px;
+  font-size: 13px;
+  color: #374151;
 }
 .guest-details .gd-help {
   color: #6b7280;
@@ -81,15 +116,19 @@
 }
 .guest-details .gd-grid.gd-1 { grid-template-columns: 1fr; }
 .guest-details .gd-grid.gd-2 { grid-template-columns: 1fr 1fr; }
-.guest-details .gd-grid.gd-3 { grid-template-columns: 140px 1fr 1fr; }
+.guest-details .gd-grid.gd-3 { grid-template-columns: 100px 1fr 1fr; }
 
 .guest-details .gd-input {
   width: 100%;
-  height: 40px;
-  border: 1px solid #e1e6ee;
-  border-radius: 6px;
-  padding: 8px 10px;
-  background: #f9fbfd;
+  height: 44px;
+  border: 1px solid #e3e8f0;
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: #fff;
+  color: #111827;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.02);
+}
+.guest-details .gd-input::placeholder {
   color: #9aa3ad;
 }
 
@@ -97,6 +136,7 @@
   display: block;
   margin-top: 10px;
   color: #374151;
+  font-size: 14px;
 }
 
 .guest-details .gd-checkboxes .gd-check {
@@ -107,6 +147,8 @@
   .guest-details .gd-wrapper {
     grid-template-columns: 1fr;
   }
+  .guest-details .gd-grid.gd-3 { grid-template-columns: 1fr; }
+  .guest-details .gd-grid.gd-2 { grid-template-columns: 1fr; }
 }
 
 
