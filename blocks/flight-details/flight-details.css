@@ -2,23 +2,26 @@
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 8px;
 }
 
 .flight-details .fd-section {
-  margin: 28px 0 52px;
+  margin: 32px 0 56px;
 }
 
 .flight-details .fd-title {
   margin: 0 0 8px;
-  font-size: 18px;
+  font-size: 16px;
   color: #6b7280;
   font-weight: 700;
+  letter-spacing: .2px;
 }
 
 .flight-details .fd-route {
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 800;
-  margin-bottom: 14px;
+  margin-bottom: 18px;
+  line-height: 1.2;
 }
 .flight-details .fd-route .fd-plane {
   margin: 0 10px;
@@ -27,12 +30,12 @@
 
 /* date chips */
 .flight-details .fd-dates {
-  margin: 8px 0 16px;
+  margin: 10px 0 18px;
 }
 .flight-details .fd-date-list {
   list-style: none;
   display: flex;
-  gap: 8px;
+  gap: 10px;
   padding: 0;
   margin: 0;
   overflow-x: auto;
@@ -40,27 +43,34 @@
 .flight-details .fd-date {
   background: #fff;
   border: 1px solid #e6ebf2;
-  border-radius: 10px;
-  padding: 10px 12px;
-  min-width: 140px;
+  border-radius: 12px;
+  padding: 12px 14px;
+  min-width: 150px;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,.04);
+  box-shadow: 0 6px 14px rgba(0,0,0,.05);
   color: #374151;
   font-size: 13px;
+  transition: transform .15s ease, box-shadow .15s ease;
 }
 .flight-details .fd-date span {
   display: block;
   margin-top: 3px;
   color: #0a7bc2;
   font-weight: 700;
+  font-size: 12px;
 }
 .flight-details .fd-date.fd-active {
   background: #ffd929;
   border-color: #ffd929;
   color: #0a6fa1;
+  box-shadow: 0 10px 20px rgba(255, 217, 41, .35);
 }
 .flight-details .fd-date.fd-active span {
   color: #0a6fa1;
+}
+.flight-details .fd-date:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 16px rgba(0,0,0,.08);
 }
 
 /* toolbar */
@@ -68,16 +78,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 8px 0 14px;
+  margin: 10px 0 16px;
 }
 .flight-details .fd-pill {
   background: #fff;
   border: 1px solid #e6ebf2;
   border-radius: 999px;
-  padding: 8px 14px;
+  padding: 10px 16px;
   font-weight: 600;
   color: #374151;
-  box-shadow: 0 2px 6px rgba(0,0,0,.04);
+  box-shadow: 0 3px 8px rgba(0,0,0,.05);
+}
+.flight-details .fd-pill:hover {
+  box-shadow: 0 6px 14px rgba(0,0,0,.08);
 }
 
 /* result card */
@@ -86,10 +99,10 @@
   grid-template-columns: 1fr 220px;
   gap: 24px;
   border: 1px solid #e6ebf2;
-  border-radius: 12px;
+  border-radius: 14px;
   background: #fff;
-  box-shadow: 0 12px 24px rgba(0,0,0,.06);
-  padding: 18px 20px;
+  box-shadow: 0 16px 28px rgba(0,0,0,.07);
+  padding: 18px 22px;
 }
 
 .flight-details .fd-times {
@@ -99,7 +112,7 @@
   gap: 10px;
 }
 .flight-details .fd-time {
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 800;
 }
 .flight-details .fd-meta {
@@ -136,6 +149,7 @@
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
+  min-width: 200px;
 }
 .flight-details .fd-badge {
   background: #e6f8ff;
@@ -154,7 +168,13 @@
 .flight-details .fd-price {
   color: #0a7bc2;
   font-weight: 800;
-  font-size: 18px;
+  font-size: 20px;
+}
+.flight-details .fd-chevron {
+  display: inline-block;
+  margin-left: 8px;
+  color: #0a7bc2;
+  font-weight: 900;
 }
 
 @media (max-width: 900px) {

@@ -6,8 +6,16 @@ export default function decorate(block) {
   wrapper.className = 'gd-wrapper';
 
   const title = document.createElement('h2');
-  title.className = 'gd-heading';
-  title.textContent = 'Guest Details';
+  title.className = 'gd-title';
+  // If a section heading exists (outside the block), reuse its text and hide it
+  const section = block.closest('.section');
+  const authoredHeading = section?.querySelector('.default-content-wrapper h1, .default-content-wrapper h2');
+  if (authoredHeading) {
+    title.textContent = authoredHeading.textContent.trim();
+    authoredHeading.style.display = 'none';
+  } else {
+    title.textContent = 'Guest Details';
+  }
 
   const card = document.createElement('div');
   card.className = 'gd-card';

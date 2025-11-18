@@ -46,7 +46,7 @@ function sectionTemplate(title, routeFrom, routeTo, selectedDateLabel, fareLabel
         <div class="fd-card-price">
           ${extraBadge ? `<div class="fd-badge">${extraBadge}</div>` : ''}
           <div class="fd-price-label">${fareLabel}</div>
-          <div class="fd-price">${fareAmount}</div>
+          <div class="fd-price">${fareAmount} <span class="fd-chevron">›</span></div>
         </div>
       </div>
     </div>

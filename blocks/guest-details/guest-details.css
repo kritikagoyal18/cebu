@@ -45,6 +45,7 @@
   border-radius: 14px;
   box-shadow: 0 12px 28px rgba(0,0,0,.06);
   overflow: hidden;
+  grid-column: 1 / -1; /* occupy full width below the title */
 }
 
 .guest-details .gd-bundles {
