@@ -48,19 +48,8 @@ export default function decorate(block) {
 
   const button = block.querySelector('.fbf-search-button');
   if (button) {
-    button.addEventListener('click', (e) => {
-      e.preventDefault();
-      const event = new CustomEvent('flight-booking-form:search', {
-        bubbles: true,
-        detail: {
-          from: 'Manila MNL',
-          to: 'Melbourne MEL',
-          depart: '13 January 2026',
-          return: '23 January 2026'
-        }
-      });
-      block.dispatchEvent(event);
-    });
+    // Navigate to Flight Details page on click
+    button.setAttribute('href', 'https://main--cebu--kritikagoyal18.aem.live/en/flight-details');
   }
 }
 
