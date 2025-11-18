@@ -1,48 +1,41 @@
 .default-button a.button {
   display: inline-block;
-  padding: 12px 24px;
+  padding: 16px 36px;
   margin: 10px 5px;
-  background-color: var(--main-accent-color);
+  background: linear-gradient(180deg, #1d9bf0, #0077d9); /* gradient blue like 'Continue' */
   color: var(--text-light);
   text-decoration: none;
-  border: 2px solid var(--main-accent-color);
-  border-radius: 4px;
+  border: none;
+  border-radius: 10px;
   font-family: var(--heading-font-family);
   font-weight: 600;
   font-size: 18px;
   line-height: 1.2;
   text-align: center;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  box-shadow: 0 8px 18px rgba(0, 119, 217, 0.28);
   position: relative;
 }
   
 .default-button a.button::after {
-  content: "\f105";
-  font-family: 'Font Awesome 5 Solid';
-  color: var(--text-light);
-  font-size: 20px;
-  margin-left: 8px;
-  transition: all 0.3s ease;
+  content: none; /* match 'Continue' button – no arrow icon */
 }
 
 .default-button  a.button:hover {
-  background-color: transparent;
-  color: var(--main-accent-color);
-  border-color: var(--main-accent-color);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(180deg, #2aa7ff, #0b6bdc);
+  color: var(--text-light);
+  box-shadow: 0 10px 22px rgba(0, 119, 217, 0.34);
   transform: translateY(-1px);
 }
 
 .default-button  a.button:hover::after {
-  color: var(--main-accent-color);
-  transform: translateX(2px);
+  color: var(--text-light);
 }
 
 .default-button  a.button:active {
   transform: translateY(0);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 14px rgba(0, 119, 217, 0.25);
 }
 
 .default-button a.button:active::after {
