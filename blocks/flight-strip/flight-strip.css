@@ -1,0 +1,87 @@
+.flight-strip .fs-bar {
+  background: #fbe700; /* CEB yellow */
+  border-radius: 14px;
+  padding: 18px 10px;
+}
+
+/* Make sure the bar spans full section width, but center the contents */
+main .section > div.flight-strip-wrapper {
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.flight-strip .fs-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.flight-strip .fs-steps {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 0 10px;
+  margin: 0;
+  position: relative;
+}
+
+.flight-strip .fs-steps::before {
+  content: '';
+  position: absolute;
+  top: 34px;
+  left: 5%;
+  right: 5%;
+  border-top: 2px dashed rgba(0, 0, 0, .25);
+}
+
+.flight-strip .fs-step {
+  position: relative;
+  text-align: center;
+  z-index: 1; /* above dashed line */
+  flex: 1 1 0;
+}
+
+.flight-strip .fs-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #ffd929;
+  border: 4px solid #1783b6;
+  color: #0a6fa1;
+  font-weight: 800;
+  font-size: 20px;
+  box-shadow: 0 0 0 4px #fbe700; /* halo to match bar */
+}
+
+.flight-strip .fs-label {
+  display: block;
+  margin-top: 8px;
+  color: #0a7bc2;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.flight-strip .fs-step.fs-active .fs-label {
+  font-weight: 800;
+}
+
+@media (max-width: 900px) {
+  .flight-strip .fs-label {
+    font-size: 14px;
+  }
+  .flight-strip .fs-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+  .flight-strip .fs-steps::before {
+    top: 30px;
+  }
+}
+
+
