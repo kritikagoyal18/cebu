@@ -295,8 +295,17 @@ async function loadLazy(doc) {
   const element = hash ? doc.getElementById(hash.substring(1)) : false;
   if (hash && element) element.scrollIntoView();
   //decorateSectionImages(doc);
-  loadHeader(doc.querySelector('header'));
-  loadFooter(doc.querySelector('footer'));
+  // Skip header/footer on pages whose path ends with "-fragment" (optionally with .html)
+  const shouldSkipHF = /-fragment(?:\.html)?$/.test(window.location.pathname);
+  if (shouldSkipHF) {
+    const headerEl = doc.querySelector('header');
+    const footerEl = doc.querySelector('footer');
+    if (headerEl) headerEl.remove();
+    if (footerEl) footerEl.remove();
+  } else {
+    loadHeader(doc.querySelector('header'));
+    loadFooter(doc.querySelector('footer'));
+  }
 
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
   loadFonts();
