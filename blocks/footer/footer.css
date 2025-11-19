@@ -6,7 +6,7 @@ footer {
   background-color: #fbe700;
   width: 100%;
   z-index: 2;
-  color: #ffffff;
+  color: #0a7bc2;
 }
 
 footer .footer > div {
@@ -29,12 +29,12 @@ footer .footer img {
 }
 
 footer .footer a {
-  color: #ffffff;
+  color: #0a7bc2;
   text-decoration: none;
 }
 
 footer .footer a:hover {
-  color: var(--main-accent-color);
+  color: #085d96;
 }
 
 @media (width >= 900px) {

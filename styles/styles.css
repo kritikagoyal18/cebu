@@ -40,8 +40,9 @@
   /* brand-scoped header/footer variables with sensible defaults */
   --nav-background-color: var(--brand-nav-background-color, #ffffff);
   --nav-text-color: var(--brand-nav-text-color, #0a7bc2);
+  --header-logo-max-height: 72px;
   --footer-background-color: var(--brand-footer-background-color, #000);
-  --footer-text-color: var(--brand-footer-text-color, #ffffff);
+  --footer-text-color: var(--brand-footer-text-color, #0a7bc2);
   
   /* fonts */
   --body-font-family: 'Adobe Clean', roboto, roboto-fallback, sans-serif;
@@ -159,6 +160,7 @@
 
     /* Screen variables */
     --nav-height: 34px;
+    --header-logo-max-height: 54px;
 
     /* Block specific */
     --signup-padding: 32px;
@@ -848,6 +850,7 @@ main .section.bg-image > .default-content-wrapper {
 
     /* Adjust spacing for mobile */
     --global-section-padding: 3rem;
+    --header-logo-max-height: 48px;
     --grid-margin: 2rem;
     --spacing-regular: 1rem;
     --spacing-medium: 1.5rem;

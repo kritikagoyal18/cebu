@@ -48,7 +48,7 @@ header nav[aria-expanded='true'] {
   header nav[aria-expanded='true'] {
     min-height: 0;
     overflow: visible;
-    padding: 22px 32px;
+    padding: 12px 32px;
     height: auto;
   }
 }
@@ -61,7 +61,7 @@ header nav[aria-expanded='true'] {
 }
 
 .wehealthcare-theme .section.nav-sections {
-  padding: 22px 32px;
+  padding: 12px 32px;
 }
 
 header nav p {
@@ -163,7 +163,8 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
 /* brand */
 header .nav-brand {
   grid-area: brand;
-  flex-basis: 128px;
+  flex-basis: auto;          /* allow brand to size to its contents */
+  min-width: max-content;    /* ensure image width isn't clipped by flex basis */
   font-size: var(--heading-font-size-s);
   font-weight: 700;
   line-height: 1;
@@ -174,13 +175,22 @@ header .nav-brand {
 }
 
 header nav .nav-brand img {
-  width: 100px;
+  display: block;
   height: auto;
+  width: auto;
+  max-height: var(--header-logo-max-height, 60px); /* increase logo size while staying within header height */
 }
 
 .wehealthcare-theme header nav .nav-brand img {
   width: auto;
-  height: 36.5px;
+  height: 48px;
+}
+
+/* Keep the logo comfortably sized on smaller screens without changing header height */
+@media (width < 900px) {
+  header nav .nav-brand img {
+    max-height: 44px;
+  }
 }
 
 /* sections */
