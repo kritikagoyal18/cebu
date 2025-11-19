@@ -129,3 +129,14 @@
   transform: translateX(0);
 }
   
+/* Layout tweaks for multiple action-button blocks in one section */
+.action-button-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+.action-button-container .action-button-wrapper {
+  flex: 0 0 auto; /* keep each block’s intrinsic width; no stretching */
+  display: inline-flex;
+}
