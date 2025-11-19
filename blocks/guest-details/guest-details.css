@@ -133,7 +133,8 @@
   color: #9aa3ad;
 }
 
-.guest-details .gd-check {
+.guest-details .gd-check,
+.guest-details .gd-checkbox {
   display: block;
   margin-top: 10px;
   color: #374151;

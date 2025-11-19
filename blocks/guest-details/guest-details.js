@@ -55,67 +55,67 @@ export default function decorate(block) {
     </div>
     <div class="gd-field">
       <label class="gd-label">Title</label>
-      <input class="gd-input" placeholder="Select" disabled>
+      <input class="gd-input" placeholder="Select">
     </div>
     <div class="gd-field">
       <label class="gd-label">First name*</label>
-      <input class="gd-input" placeholder="Enter first name" disabled>
+      <input class="gd-input" placeholder="Enter first name">
     </div>
     <div class="gd-field">
       <label class="gd-label">Last name*</label>
-      <input class="gd-input" placeholder="Enter last name" disabled>
+      <input class="gd-input" placeholder="Enter last name">
     </div>
     <div class="gd-field full">
-      <label class="gd-checkbox"><input type="checkbox" disabled> I have no first name</label>
+      <label class="gd-checkbox"><input type="checkbox"> I have no first name</label>
     </div>
     <div class="gd-field">
       <label class="gd-label">Day*</label>
-      <input class="gd-input" placeholder="DD" disabled>
+      <input class="gd-input" placeholder="DD">
     </div>
     <div class="gd-field">
       <label class="gd-label">Month*</label>
-      <input class="gd-input" placeholder="Month" disabled>
+      <input class="gd-input" placeholder="Month">
     </div>
     <div class="gd-field">
       <label class="gd-label">Year*</label>
-      <input class="gd-input" placeholder="YYYY" disabled>
+      <input class="gd-input" placeholder="YYYY">
     </div>
     <div class="gd-field full">
       <label class="gd-label">Nationality*</label>
-      <input class="gd-input" placeholder="Select nationality" disabled>
+      <input class="gd-input" placeholder="Select nationality">
     </div>
     <div class="gd-field full">
       <label class="gd-label">Go Rewards Membership ID (Optional)</label>
-      <input class="gd-input" placeholder="e.g. 4041178445" disabled>
+      <input class="gd-input" placeholder="e.g. 4041178445">
     </div>
     <div class="gd-field">
       <label class="gd-label">Passport number</label>
-      <input class="gd-input" placeholder="Enter passport number" disabled>
+      <input class="gd-input" placeholder="Enter passport number">
     </div>
     <div class="gd-field">
       <label class="gd-label">Country of Issue</label>
-      <input class="gd-input" placeholder="Select country" disabled>
+      <input class="gd-input" placeholder="Select country">
     </div>
     <div class="gd-field">
       <label class="gd-label">Day</label>
-      <input class="gd-input" placeholder="DD" disabled>
+      <input class="gd-input" placeholder="DD">
     </div>
     <div class="gd-field">
       <label class="gd-label">Month</label>
-      <input class="gd-input" placeholder="Month" disabled>
+      <input class="gd-input" placeholder="Month">
     </div>
     <div class="gd-field">
       <label class="gd-label">Year</label>
-      <input class="gd-input" placeholder="YYYY" disabled>
+      <input class="gd-input" placeholder="YYYY">
     </div>
     <div class="gd-field full">
-      <label class="gd-checkbox"><input type="checkbox" disabled> I am an Overseas Filipino Worker (OFW)</label>
+      <label class="gd-checkbox"><input type="checkbox"> I am an Overseas Filipino Worker (OFW)</label>
     </div>
     <div class="gd-field full">
-      <label class="gd-checkbox"><input type="checkbox" disabled> I have a declaration / request</label>
+      <label class="gd-checkbox"><input type="checkbox"> I have a declaration / request</label>
     </div>
     <div class="gd-field full">
-      <label class="gd-checkbox"><input type="checkbox" disabled> I am a Person with Disability</label>
+      <label class="gd-checkbox"><input type="checkbox"> I am a Person with Disability</label>
     </div>
   `;
 
