@@ -16,6 +16,11 @@ main .faq > div {
   display: flex;
 }
 
+/* Ensure FAQ accordion items stack vertically (title then content) */
+main .faq > .faq-item {
+  display: block;
+}
+
 main .faq div.faq-text {
   max-width: 1200px;
   margin: 0 auto;
@@ -146,4 +151,81 @@ main .faq div.faq-text .button {
 
 @media (max-width: 600px) {
   main .faq { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+}
+
+/* Accordion layout overrides */
+main .faq {
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.faq-item {
+  background: #ffffff;
+  border: 1px solid #d7e7f7;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  overflow: hidden;
+}
+
+.faq-item.open {
+  border-color: #0a7bc2;
+  box-shadow: 0 6px 16px rgba(10, 123, 194, 0.18);
+}
+
+.faq-acc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 16px 20px;
+  background: #ffffff;
+  color: #0a7bc2;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+.faq-acc-header:hover {
+  background: #f6fbff;
+}
+
+.faq-acc-title {
+  text-align: left;
+}
+
+.faq-acc-chevron {
+  width: 14px;
+  height: 14px;
+  border-right: 2px solid #0a7bc2;
+  border-bottom: 2px solid #0a7bc2;
+  transform: rotate(-45deg);
+  transition: transform 0.2s ease;
+  flex: 0 0 auto;
+}
+
+.faq-item.open .faq-acc-chevron {
+  transform: rotate(135deg);
+}
+
+.faq-acc-panel {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  background: transparent;
+  transition: max-height 0.25s ease, padding 0.25s ease, background-color 0.25s ease;
+}
+
+.faq-item.open .faq-acc-panel {
+  max-height: 800px;
+  padding: 16px 20px 20px 20px;
+  background: #eaf4ff;
+  border-top: 1px solid #d7e7f7;
+}
+
+.faq-acc-content p {
+  margin: 0;
+  color: var(--body-text-color, #2b2b2b);
+  font-size: 16px;
+  line-height: 1.5;
 }

@@ -302,6 +302,8 @@ async function loadLazy(doc) {
     const footerEl = doc.querySelector('footer');
     if (headerEl) headerEl.remove();
     if (footerEl) footerEl.remove();
+    const launchScript = document.querySelector('script[src*="assets.adobedtm.com"]');
+    if (launchScript) launchScript.remove();
   } else {
     loadHeader(doc.querySelector('header'));
     loadFooter(doc.querySelector('footer'));
