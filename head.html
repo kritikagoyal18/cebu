@@ -7,4 +7,18 @@
 
 <!-- DO NOT DELETE THE BELOW SCRIPTS -->
 <script type="text/javascript" src="https://s7d1.scene7.com/s7viewers/libs/responsive_image.js" defer></script>
-<script src="https://assets.adobedtm.com/d9398df04e0d/feaf343487f2/launch-709ce623147a-development.min.js" async></script>
+<script>
+(function() {
+  try {
+    var shouldSkip = /-fragment(?:\.html)?$/.test(window.location.pathname);
+    if (!shouldSkip) {
+      var s = document.createElement('script');
+      s.src = 'https://assets.adobedtm.com/d9398df04e0d/feaf343487f2/launch-709ce623147a-development.min.js';
+      s.async = true;
+      document.head.appendChild(s);
+    }
+  } catch (e) {
+    // no-op
+  }
+})();
+</script>
