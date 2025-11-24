@@ -1,0 +1,149 @@
+main .faq-container {
+  padding: 0;
+}
+
+main .faq {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* Removed legacy picture rules; cards render regular <img> elements */
+
+main .faq > div {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+main .faq div.faq-text {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  min-height: 188px;
+  padding: 0 28px;
+}
+
+main .faq div.faq-text p {
+  margin: 10px 0 16px;
+  line-height: 1.2;
+}
+
+main .faq div.faq-text h2 {
+  margin: 0;
+  margin-top: 16px; 
+}
+
+main .faq div.faq-text .button {
+  margin: 0;
+}
+  
+
+/* remove scrollbar override from carousel */
+
+/* remove wrapper styles */
+
+/* remove pagination buttons */
+
+/* removed */
+
+/* removed */
+
+/* remove arrows container */
+
+/* removed */
+
+/* removed */
+
+/* removed */
+
+/* Card Styles */
+.faq-card {
+  * {
+    box-sizing: border-box;
+  }
+  background: #f3f3f2cc;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 0 7px rgba(0,0,0,0.10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  transition: box-shadow 0.2s;
+}
+
+.faq-card-body {
+  padding: 28px 24px 24px 24px;
+  text-align: left;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.faq-card-body h2, .faq-card-body h3 {
+  color: var(--heading-color, #0b2b5c);
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+
+.faq-card-body p {
+  color: var(--body-text-color, #2b2b2b);
+  font-size: 18px;
+  line-height: 1.45;
+  margin: 0 0 20px 0;
+}
+
+.faq-card-btn {
+  background: transparent;
+  color: #00a19f;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  font-size: 18px;
+  font-weight: 700;
+  width: auto;
+  cursor: pointer;
+  transition: color 0.2s, transform 0.2s;
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.faq-card-btn:hover {
+  color: var(--link-hover-color, var(--link-color));
+  text-decoration: underline;
+}
+
+.faq-card-btn::after {
+  content: '→';
+  font-size: 18px;
+  line-height: 1;
+  transform: translateX(0);
+  transition: transform 0.2s ease;
+}
+
+.faq-card-btn:hover::after {
+  transform: translateX(2px);
+}
+
+/* removed */
+
+/* remove pagination dots */
+
+/* Responsive */
+@media (max-width: 900px) {
+  main .faq { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .faq-card-body {
+    padding: 16px 8px 12px 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  main .faq { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+}

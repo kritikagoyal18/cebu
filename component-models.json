@@ -792,6 +792,18 @@
     "fields": []
   },
   {
+    "id": "faq",
+    "fields": [
+      {
+        "component": "text",
+        "name": "reference",
+        "value": "",
+        "label": "FAQ Folder Path",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "dm-asset",
     "fields": [
         {
