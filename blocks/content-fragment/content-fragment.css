@@ -144,19 +144,6 @@ main .section > div.content-fragment-wrapper {
   position: relative;
 }
 
-.content-fragment-wrapper .content-fragment .banner-content.image-left::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  background: inherit;
-  background-size: contain;
-  background-position: center;
-  z-index: 1;
-}
-
 .content-fragment-wrapper .content-fragment .banner-content.image-left .banner-detail {
   flex: 1;
   display: flex;
@@ -181,19 +168,6 @@ main .section > div.content-fragment-wrapper {
   background-position: right center;
   background-repeat: no-repeat;
   position: relative;
-}
-
-.content-fragment-wrapper .content-fragment .banner-content.image-right::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50%;
-  height: 100%;
-  background: inherit;
-  background-size: contain;
-  background-position: center;
-  z-index: 1;
 }
 
 .content-fragment-wrapper .content-fragment .banner-content.image-right .banner-detail {
@@ -363,13 +337,6 @@ main .section > div.content-fragment-wrapper {
     background-position: center top;
   }
   
-  .content-fragment-wrapper .content-fragment .banner-content.image-left::before,
-  .content-fragment-wrapper .content-fragment .banner-content.image-right::before {
-    width: 100%;
-    height: 300px;
-    position: relative;
-  }
-  
   .content-fragment-wrapper .content-fragment .banner-content.image-left .banner-detail,
   .content-fragment-wrapper .content-fragment .banner-content.image-right .banner-detail {
     margin-left: 0;
@@ -406,11 +373,6 @@ main .section > div.content-fragment-wrapper {
 }
 
 @media (width < 768px) {
-  .content-fragment-wrapper .content-fragment .banner-content.image-left::before,
-  .content-fragment-wrapper .content-fragment .banner-content.image-right::before {
-    height: 200px;
-  }
-  
   .content-fragment-wrapper .content-fragment .banner-content.image-left .banner-detail,
   .content-fragment-wrapper .content-fragment .banner-content.image-right .banner-detail,
   .content-fragment-wrapper .content-fragment .banner-content.image-top .banner-detail,
